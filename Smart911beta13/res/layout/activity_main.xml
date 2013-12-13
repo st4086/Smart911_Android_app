@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:textSize = "20sp"
+        android:textColor = "#ffffff"
+        android:text="@string/welcome_msg" />
+
+    <EditText
+        android:id="@+id/msg_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_msg_number" />
+    
+    <EditText
+        android:id="@+id/call_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_call_number" />
+    		
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin"
+        android:orientation="horizontal" >
+        
+		        <Button
+		       	android:id="@+id/btn_set_ps"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="detectPassword"
+		        android:text="Set up"
+		        style="@style/BlueLabel" >
+		  		</Button>
+        
+        	<Button
+        	    android:id="@+id/btn_start_service"
+        	    style="@style/BlueLabel"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    
+        	    android:onClick="kickOff"
+        	    android:text="kick off" >
+
+	    	</Button>
+	    	
+        	<Button
+        	    android:id="@+id/btn_stop_service"
+        	    style="@style/BlueLabel"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    
+        	    android:onClick="stopService"
+        	    android:text="Stop it" >
+
+    		</Button>
+    	
+    		<Button
+    		    android:id="@+id/btn_show_match"
+    		    style="@style/BlueLabel"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:onClick="showServiceData"
+    		    android:text="show me" >
+    		</Button>    		
+    </LinearLayout>
+
+    
+    	
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor = "#ffffff" >
+    </ListView>
+
+</LinearLayout> 
